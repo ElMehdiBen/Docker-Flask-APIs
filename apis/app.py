@@ -13,6 +13,11 @@ def formaturl(url):
         return 'http://{}'.format(url)
     return url
 
+# Below function is an example to test the API giving it a body as a request and getting it back as a response
+@app.route('/leyton/API/v1/apitrial', methods=['POST'])
+def api_trial():
+    req = request.json
+    return {"result": {"request": req}}, 200
 
 @app.route('/leyton/API/v1/rendtime', methods=['POST'])
 def get_rendtime():
@@ -28,7 +33,6 @@ def get_rendtime():
     b = datetime.datetime.now()
     loading_time = round((time() - start),2)
     return {"results": {"redering_time_s": loading_time}}, 200
-
 
 if __name__ == '__main__':
     # define the localhost ip and the port that is going to be used
