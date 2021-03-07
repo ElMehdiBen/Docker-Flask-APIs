@@ -1,0 +1,8 @@
+requests==2.22.0
+google_patent_scraper==1.0.8
+tika==1.24
+pydantic==1.7.3
+sentence_transformers==0.4.1.2
+fastapi==0.63.0
+bs4
+uvicorn[standard]
