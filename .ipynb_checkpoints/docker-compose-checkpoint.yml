@@ -1,8 +1,0 @@
-version: '3.7'
-services:
-    patent-finder:
-        build: ./
-        container_name: patent-finder
-        #restart: always
-        ports:
-            - 5055:5055
